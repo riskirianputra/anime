@@ -21,19 +21,18 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li ><a href="/">Homepage</a></li>
-                                <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
+                                <li><a href="#">Categories <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
                                         <li><a href="/kategori">Categories</a></li>
                                         <li><a href="/kategori">Genre</a></li>
                                         <li><a href="/anime-detail">Anime Details</a></li>
-                                        <li><a href="./anime-watching.html">Anime Watching</a></li>
-                                        <li><a href="./blog-details.html">Blog Details</a></li>
-                                        <li><a href="./signup.html">Sign Up</a></li>
+                                        <li><a href="#">Anime Watching</a></li>                                        
+                                        <li><a href="#">Sign Up</a></li>
                                         <li><a href="/login">Login</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="/daftar-anime">Daftar Anime</a></li>
-                                <li><a href="./blog.html">Daftar Manga</a></li>
+                                <li><a href="#">Daftar Manga</a></li>
                                 <li><a href="#">Contacts</a></li>
                             </ul>
                         </nav>

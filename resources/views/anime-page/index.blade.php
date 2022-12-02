@@ -31,7 +31,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 
                 <div class="hero__items set-bg" data-setbg="../asset/img/hero/hero-4.png">                
                     <div class="row">
