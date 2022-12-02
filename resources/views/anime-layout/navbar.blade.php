@@ -60,15 +60,15 @@
                                 <li class="active"><a href="./index.html" role="menuitem">Homepage</a></li>
                                 <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;"><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
                                     <span class="slicknav_arrow">►</span></a><ul class="dropdown slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
-                                        <li><a href="./categories.html" role="menuitem" tabindex="-1">Categories</a></li>
-                                        <li><a href="./anime-details.html" role="menuitem" tabindex="-1">Anime Details</a></li>
-                                        <li><a href="./anime-watching.html" role="menuitem" tabindex="-1">Anime Watching</a></li>
-                                        <li><a href="./blog-details.html" role="menuitem" tabindex="-1">Blog Details</a></li>
-                                        <li><a href="./signup.html" role="menuitem" tabindex="-1">Sign Up</a></li>
+                                        <li><a href=".#" role="menuitem" tabindex="-1">Categories</a></li>
+                                        <li><a href=".#" role="menuitem" tabindex="-1">Anime Details</a></li>
+                                        <li><a href=".#" role="menuitem" tabindex="-1">Anime Watching</a></li>
+                                        <li><a href="#" role="menuitem" tabindex="-1">Blog Details</a></li>
+                                        <li><a href="#" role="menuitem" tabindex="-1">Sign Up</a></li>
                                         <li><a href="/login" role="menuitem" tabindex="-1">Login</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./blog.html" role="menuitem">Our Blog</a></li>
+                                <li><a href="#" role="menuitem">Our Blog</a></li>
                                 <li><a href="#" role="menuitem">Contacts</a></li>
                             </ul>
                         </nav>
