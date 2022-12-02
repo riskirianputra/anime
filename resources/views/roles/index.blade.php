@@ -28,13 +28,14 @@
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Import</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+                          <button type="submit" class="btn btn-primary"> Import </button>
                         </div>
                   </div>
                 </form>
               </div>
-            </div>    </h3>
+            </div>    
+        </h3>
 <div>
     <div class="alert alert-secondary mx-4" role="alert">
         <span class="text-white">

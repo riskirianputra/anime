@@ -10,29 +10,30 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\PermissionsController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AnimedetailController;
+use App\Http\Controllers\DaftaranimeController;
+use App\Http\Controllers\AnimeController;
+use App\Http\Controllers\GenreController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\AbjadController;
+use App\Http\Controllers\TypeController;
+use App\Http\Controllers\EpisodeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Route;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
-/*	
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 
 Route::group(['middleware' => 'auth'], function () {
-
-    Route::get('/', [HomeController::class, 'home']);
 	
-	
+		Route::prefix('gallery')->group(function () {
+            Route::get('/', [GalleryController::class, 'index'])->name('gallery.index');
+            Route::post('/store', [GalleryController::class, 'store'])->name('gallery.store');
+            Route::get('/delete/{id}', [GalleryController::class, 'destroy'])->name('gallery.delete');
+        });
+		
 
 	Route::get('dashboard', function () {
 		return view('dashboard');
@@ -95,16 +96,38 @@ Route::group(['middleware' => 'guest'], function () {
 	
 });
 
-Route::get('/login', function () {
-    return view('session/login-session');
-})->name('login');
+Route::get('/', function () {
+    return view('anime-page.index');
+})->name('');
 
     Route::resource('user', UserController::class);
 	Route::resource('posts', PostController::class);	
 	
 	Route::resource('roles', RolesController::class) ;
     Route::resource('permissions', PermissionsController::class);
+
 	
 	Route::put('post/{id}/publish', [PostController::class, 'publish'])->name('post.publish');
 	Route::put('post/{id}/unpublish', [PostController::class, 'unpublish'])->name('post.unpublish');
 	
+	Route::resource('anime-detail', AnimedetailController::class);
+	Route::resource('kategori', CategoryController::class);
+
+	Route::resource('daftar-anime',DaftaranimeController::class);
+	Route::resource('index-anime',IndexController::class);
+
+	Route::resource('anime',AnimeController::class);
+
+	Route::resource('genre' ,GenreController::class);
+	Route::resource('abjad' ,AbjadController::class);
+	Route::resource('type' ,TypeController::class);
+	Route::resource('episode' ,EpisodeController::class);
+
+
+	
+	Route::get('/Anime-genre/{genre}', [DaftaranimeController::class, 'anime_genre'])->name('anime.genre');
+	Route::get('/Anime-abjad/{abjad}', [DaftaranimeController::class, 'anime_abjad'])->name('anime.abjad');	
+	Route::get('/Anime-episode/{episode}', [AnimedetailController::class, 'anime_episode'])->name('anime.episode');	
+	Route::get('/Anime/{anime}', [DaftaranimeController::class, 'show'])->name('anime.detail');
+	Route::get('/Anime/{episode}', [DaftaranimeController::class, 'show'])->name('anime.detail');
+

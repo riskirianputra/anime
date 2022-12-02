@@ -6,7 +6,6 @@
         <div class="lead">
             Editing permission.
         </div>
-
         <div class="container mt-4">
             <form method="POST" action="{{ route('permissions.update', $permission->id) }}">
                 @method('patch')

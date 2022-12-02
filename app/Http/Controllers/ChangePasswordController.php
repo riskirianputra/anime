@@ -20,7 +20,7 @@ class ChangePasswordController extends Controller
             'email' => 'required|email',
             'password' => 'required|min:8|confirmed',
         ]);
-    
+        
         $status = Password::reset(
             $request->only('email', 'password', 'password_confirmation', 'token'),
             function ($user, $password) {
@@ -36,4 +36,5 @@ class ChangePasswordController extends Controller
                     ? redirect('/login')->with('success', __($status))
                     : back()->withErrors(['email' => [__($status)]]);
     }
-}
+
+    }
